@@ -311,7 +311,7 @@ function  updateEmpRole(){
 }
 
 //----- Update employee manager function ------
-function  updatEmpman(){
+/*function  updateEmpman(){
   db.findAllEmployees()
   .then(([rows]) =>{
       let employee1 = rows;
@@ -323,7 +323,7 @@ function  updatEmpman(){
           {
           type: "list",
           name: "employeeId",
-          message: "which employee's manager do you want to update?",
+          message: "Which employee's manager do you want to update?",
           choices: empchoice1
           }
       ]).then (response => {
@@ -352,7 +352,7 @@ function  updatEmpman(){
           })
           })
   })
-}
+}*/
 
 // --- Function to delete employee---
 function  delEmp(){
@@ -366,7 +366,7 @@ function  delEmp(){
           {
           type: "list",
           name: "delemployeen",
-          message: "chose the employee to be delete?",
+          message: "Choose the employee to be delete?",
           choices: delempchoice
           }
       ])
@@ -426,7 +426,7 @@ function delDept(){
           })
 }
 
-// ---- toatl budget of the company----
+// ---- total budget of the company----
 
 function  tolBudget() {
   console.log("hit")
@@ -438,36 +438,7 @@ function  tolBudget() {
   .then(() => mainMenu())
 }
 
-
-// ----- total budget frm the choosen dept---
-function budbyDept(){
-  db.findAllDepartments()
-  .then(([rows3]) => {
-    let buddept = rows3;
-    const buddeptChoice = buddept.map(({department}) => ({
-      name:   department
-    }))
-    inquirer.prompt([
-      {
-      type: "list",
-      name: "deptbud",
-      message: "Choose desire department to view budget",
-      choices: buddeptChoice
-      }
-  ])
-  .then (answer => {
-     db.budbydept1(answer.deptbud)
-     .then(([rows2]) =>{
-      let viewbd = rows2;
-      console.table(viewbd)
-    })
-    .then(() => mainMenu())
-     })
-          })
-}
-
-
-function quit(){
-  console.log("bye. See You soon")
+function exit(){
+  console.log("Thanks for using Employee Tracker")
   process.exit()
 }
