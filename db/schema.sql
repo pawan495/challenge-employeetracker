@@ -1,7 +1,7 @@
-DROP DATABASE IF EXISTS emptracker_db;
-CREATE DATABASE emptracker_db;
+DROP DATABASE IF EXISTS empltrack_db;
+CREATE DATABASE empltrack_db;
 
-USE emptracker_db;
+USE empltrack_db;
 
 CREATE TABLE department (
      id INT NOT NULL AUTO_INCREMENT,

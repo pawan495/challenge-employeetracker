@@ -1,4 +1,4 @@
-const express = require('express');
+//const express = require('express');
 const inquirer = require("inquirer");
 const { connection } = require("./db");
 const db = require('./db');
@@ -21,7 +21,7 @@ function mainMenu(){
                       "Update employee role", "Update employee managers",
                       "View by manager", "View by department",
                       "Delete employee", "Delete Role", "Delete Department",
-                      "total budget" , "budget by department", " Exit Employee Tracker"],
+                      "total budget" , " Exit Employee Tracker"],
                       pageSize: 10
       }
   ])

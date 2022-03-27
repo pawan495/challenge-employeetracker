@@ -1,4 +1,4 @@
-USE emptracker.db;
+USE empltrack_db;
 
 INSERT INTO department
   (name)
