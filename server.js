@@ -7,11 +7,13 @@ const db = require("./db")
 init();
 
 function init() {
+  console.log("  -----------########---------- ")
     console.log("  ❤   Employee Tracker! ❤ ")
+    console.log("  -----------########---------- ")
+
     mainMenu()
 
 }
-
 function mainMenu(){
     inquirer.prompt([
         {
@@ -27,9 +29,9 @@ function mainMenu(){
                         pageSize: 10
         }
     ])
-    .then(response =>{
-        console.log(response)
-        let userChoice = response.choice;
+    .then(responce =>{
+        console.log(responce)
+        let userChoice = responce.choice;
         console.log(userChoice)
         switch( userChoice ) {
             case "View Departments":
@@ -156,9 +158,9 @@ function addRole(){
     
        } }
     }
-  ]).then(response => {
-    let newrole = response.roletitle;
-    let newsalary = response.salary;
+  ]).then(responce => {
+    let newrole = responce.roletitle;
+    let newsalary = responce.salary;
     db.findAllDepartments()
     .then(([rows]) =>{
       let deptn = rows;
@@ -204,7 +206,7 @@ function addRole(){
       },
       {
         type: "input",
-        message: "Enter the Manager id",
+        message: "Enter the manager id",
         name: "newempdept"
       }
     ])
@@ -292,8 +294,8 @@ function  updateEmpRole(){
           message: "which employee's role do you want to update?",
           choices: empchoice1
           }
-      ]).then (response => {
-          let employeeId = response.employeeId;
+      ]).then (responce => {
+          let employeeId = responce.employeeId;
           db.findAllroles()
   .then(([rows]) =>{
       let employee2 = rows;
@@ -308,8 +310,8 @@ function  updateEmpRole(){
                   message: "which  role do you want to assign to?",
                   choices: emprolechoice
                   }
-              ]).then(response => {
-                  let newrole = response.empnewrole;
+              ]).then(responce => {
+                  let newrole = responce.empnewrole;
                   db.updateEmpRole(employeeId, newrole)
                   console.log("Employee role updated");
               })
@@ -336,8 +338,8 @@ function  updatEmpman(){
           message: "which employee's manager do you want to update?",
           choices: empchoice1
           }
-      ]).then (response => {
-          let employeeId = response.employeeId;
+      ]).then (responce => {
+          let employeeId = responce.employeeId;
           db.findAllEmployees()
           .then (([rows1]) => {
               let manager1 = rows1;
@@ -352,8 +354,8 @@ function  updatEmpman(){
                   message: "Who is your new manager?",
                   choices: manChoices2
                   }
-              ]).then(response => {
-                  let newman = response.managername;
+              ]).then(responce => {
+                  let newman = responce.managername;
                   db.updateempman(employeeId, newman)
                   console.log("Employee manager updated");
                 
