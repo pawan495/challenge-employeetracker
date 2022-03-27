@@ -1,3 +1,4 @@
+-- Employee tracker DATABASE created---
 DROP DATABASE IF EXISTS empltrack_db;
 CREATE DATABASE empltrack_db;
 

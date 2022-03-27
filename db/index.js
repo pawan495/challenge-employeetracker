@@ -4,7 +4,9 @@ class DB {
     constructor(connection){
         this.connection = connection;
     }
- //-------view all deaprtment query----
+
+
+    //-------view all deaprtment query----
     findAllDepartments(){
         return this.connection.promise().query(
         "select id as dept_id, name as department from department ORDER BY ID ASC;"
@@ -18,7 +20,8 @@ class DB {
             ) 
     
         }
- //-------view all employee query----
+
+    //-------view all employee query----
     findAllEmployees(){
          return this.connection.promise().query(
          "SELECT employee.id, employee.first_name, employee.last_name, roles.title, department.name AS department, roles.salary, concat(m.first_name, ' ' ,  m.last_name) AS manager FROM employee employee LEFT JOIN employee m ON employee.manager_id = m.id INNER JOIN roles ON employee.role_id = roles.id INNER JOIN department ON roles.department_id = department.id ORDER BY ID ASC;"
@@ -47,7 +50,7 @@ class DB {
     }
 
     // ----- View by manager query -----
-    viewbymanager(empmanId){
+    vewbymanager(empmanId){
         return this.connection.promise().query(
         `SELECT employee.id, employee.first_name, employee.last_name, concat(m.first_name, ' ' ,  m.last_name) AS manager FROM employee employee LEFT JOIN employee m ON employee.manager_id = m.id  INNER JOIN roles ON employee.role_id = roles.id  where m.first_name = "${empmanId}";` 
         )
@@ -106,7 +109,20 @@ class DB {
 
     totalbudgets(){
         return this.connection.promise().query( "SELECT  SUM(salary) AS budget FROM  roles INNER JOIN department ON roles.department_id = department.id inner join employee on employee.role_id = roles.id")
-    }
+     }
+
+     budbydept1(bbDebt){
+        return this.connection.promise().query(
+           `SELECT department_id AS id, 
+           department.name AS department,
+           SUM(salary) AS budget
+           FROM  roles  
+           INNER JOIN department ON roles.department_id = department.id 
+           inner join employee on employee.role_id = roles.id
+           where department.name = "${bbDebt}";`
+        )
+   }
+
 }
 
 module.exports = new DB(connection);
