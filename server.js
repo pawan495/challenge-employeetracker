@@ -1,7 +1,16 @@
 const express = require('express');
-const db = require('./db/connection');
-const apiRoutes = require('./routes/apiRoutes');
+const inquirer = require("inquirer");
+const { connection } = require("./db");
+const db = require('./db');
 
+init();
+function init() {
+    console.log("----------------********-----------------")
+    console.log("        ❤  Employee Tracker ❤")
+    console.log("----------------********-----------------")
+    mainMenu()
+
+}
 const PORT = process.env.PORT || 3012;
 const app = express();
 
