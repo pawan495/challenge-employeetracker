@@ -311,7 +311,7 @@ function  updateEmpRole(){
 }
 
 //----- Update employee manager function ------
-/*function  updateEmpman(){
+function  updateEmpman(){
   db.findAllEmployees()
   .then(([rows]) =>{
       let employee1 = rows;
@@ -352,7 +352,7 @@ function  updateEmpRole(){
           })
           })
   })
-}*/
+}
 
 // --- Function to delete employee---
 function  delEmp(){

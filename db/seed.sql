@@ -19,17 +19,17 @@ VALUES
   ("AI", 45000 , 2),
   ("Service rep", 30000, 5),
   ("Car service" ,55000, 3),
-  ("Truck service" ,56000,3 )
-  ("IT", 54000,1);
-  ("Agri admin", 53000,4)
+  ("Truck service" ,56000,3 ),
+  ("IT", 54000,1),
+  ("Agri admin", 53000,4);
 
 INSERT INTO employee
-    (first_name, last_name, role_id,manager_id)
+    (first_name, last_name, role_id, manager_id)
 VALUES
   ('Pawanpreet', 'Kaur', 1, null),
   ('Jasmeet', 'Kaur', 2, 1),
   ('Tripti', 'Kaur', 4, 0),
-  ('Jatinder ', 'Singh', 1, 1),
+  ('Jatinder ', 'Singh', 1, null),
   ('Rajinder', 'Singh', 3, 1),
   ('Chinmey', 'Dixit', 2, 0),
   ('Suman', 'Sharma', 1, 0),
