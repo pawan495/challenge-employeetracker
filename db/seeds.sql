@@ -5,18 +5,26 @@ INSERT INTO department
 VALUES
 ("AI department"),
 ("Web Developer"),
-
+("Agriculture"),
+("HR"),
+("Auto Mobile"),
+("Data Admin")
   ;
 
-INSERT INTO parties
-  (name, description)
+INSERT INTO roles
+  (title, salary, department_id)
 VALUES
-  ('JS Juggernauts', 'The JS Juggernauts eat, breathe, and sleep JavaScript. They can build everything you could ever want in JS, including a new kitchen sink.'),
-  ('Heroes of HTML', 'Want to see a mock-up turn into an actual webpage in a matter of minutes? Well, the Heroes of HTML can get it done in a matter of seconds.'),
-  ('Git Gurus', 'Need to resolve a merge conflict? The Git Gurus have your back. Nobody knows Git like these folks do.');
+  ("HR manager", 55000 , 1),
+  ("Developer", 50000 ,1),
+  ("AI", 45000 , 2),
+  ("Service rep", 30000, 5),
+  ("Service rep", 30000, 5),
+  ("Car service" ,55000, 4),
+  ("Truck service" ,56000,3 )
+  ("IT", 54000,3);
 
-INSERT INTO candidates
-  (first_name, last_name, party_id, industry_connected)
+INSERT INTO employee
+    (first_name, last_name, role_id,manager_id)
 VALUES
   ('Ronald', 'Firbank', 1, 1),
   ('Virginia', 'Woolf', 1, 1),
