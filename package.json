@@ -4,6 +4,7 @@
   "description": "Back-end APIs for a voting app.",
   "main": "server.js",
   "dependencies": {
+    "dotenv": "^16.0.0",
     "express": "^4.17.3",
     "mysql2": "^2.2.5"
   },
@@ -12,9 +13,17 @@
     "start": "node server.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "PAWANPREET KAUR",
   "license": "ISC",
   "devDependencies": {
     "jest": "^26.6.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pawan495/challenge-employeetracker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pawan495/challenge-employeetracker/issues"
+  },
+  "homepage": "https://github.com/pawan495/challenge-employeetracker#readme"
 }
