@@ -1,7 +1,7 @@
 {
   "name": "employeetracker",
   "version": "1.0.0",
-  "description": "Back-end APIs for a voting app.",
+  "description": "Back-end APIs for a tech blog app.",
   "main": "server.js",
   "dependencies": {
     "dotenv": "^16.0.0",
