@@ -1,6 +1,6 @@
 USE empltrack_db;
 
-/*INSERT INTO department
+INSERT INTO department
   (name)
 VALUES
 ("AI department"),
@@ -11,7 +11,7 @@ VALUES
 ("Data Admin")
   ;
 
-/*INSERT INTO roles
+INSERT INTO roles
   (title, salary, department_id)
 VALUES
   ("HR manager", 55000 , 1),
