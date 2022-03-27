@@ -26,8 +26,7 @@
 
 ## Deployed links
  `Video link`
-  https://drive.google.com/file/d/1ofqq8rNJl6cytAIT5HqLmpsa4oU62k4w/view:  
-
+https://drive.google.com/file/d/1cWCyvMJPV4x29lGO2OMT_DRxA-JoIQR7/view
 
   `Sample pic`
 
