@@ -4,6 +4,7 @@
   "description": "Back-end APIs for a tech blog app.",
   "main": "server.js",
   "dependencies": {
+    "console.table": "^0.10.0",
     "dotenv": "^16.0.0",
     "express": "^4.17.3",
     "inquirer": "^8.2.2",
@@ -11,7 +12,7 @@
   },
   "scripts": {
     "test": "jest",
-    "start": "node server.js"
+    "start": "node app.js"
   },
   "keywords": [],
   "author": "PAWANPREET KAUR",
