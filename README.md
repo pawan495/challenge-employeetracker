@@ -26,7 +26,8 @@
 
 ## Deployed links
  `Video link`
-https://drive.google.com/file/d/1cWCyvMJPV4x29lGO2OMT_DRxA-JoIQR7/view:
+https://drive.google.com/file/d/1f1t9b5RXKEfg_xwnXhfL1CxMU3sj0qoi/view:
+
   `Sample pic`
 
   ![employee tracker](pic1.png)
